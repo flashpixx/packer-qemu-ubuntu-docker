@@ -5,7 +5,7 @@
 * Docker
 * Make
 
-## BUild & Run
+## Build & Run
 
 1. run `make build` (it builds the a container with Packer, Qemu and all tools - this step can be skipped after the first build)
 2. run `make run` (the command opens a shell within the container)

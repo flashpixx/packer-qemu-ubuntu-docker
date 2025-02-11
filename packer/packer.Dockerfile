@@ -3,7 +3,8 @@ FROM ubuntu:noble
 # --- environment setup with user home, display for vnc and nginx port
 ARG USER=ubuntu
 ENV DEBIAN_FRONTEND=noninteractive \
-    PACKER_LOG=1
+    PACKER_LOG=1 \
+    PACKER_LOG_PATH="/dev/stdout"
 EXPOSE 8080
 EXPOSE 9090
 

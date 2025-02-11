@@ -1,8 +1,8 @@
 services:
 
-    packer:
+    packerweb:
         restart: on-failure:3
-        image: packer:latest
+        image: packerweb:latest
         build:
             context: packer/
             dockerfile: packer.Dockerfile

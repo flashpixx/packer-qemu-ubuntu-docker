@@ -2,7 +2,7 @@ default: run
 .PHONY:  run
 run:
 	@docker compose up -d
-	@docker compose exec packer bash
+	@docker compose exec packerweb bash
 	@docker compose down
 
 .PHONY: build

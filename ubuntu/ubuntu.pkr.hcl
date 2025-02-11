@@ -54,4 +54,16 @@ build {
   sources = [ 
     "source.qemu.ubuntu", 
   ]
+
+  # https://developer.hashicorp.com/packer/docs/provisioners/shell
+  # IMPORTANT: some lists need an empty line first, otherwise items will be skipped,
+  #            see https://developer.hashicorp.com/packer/docs/debugging#issues-installing-ubuntu-packages so we need to wait until cloud-init script is finished and except that the 
+  provisioner "shell" {
+    expect_disconnect = true
+
+    inline = [
+        "",
+        "cloud-init status --wait",
+    ]
+  }
 }
